@@ -1,0 +1,162 @@
+wsm@DESKTOP-DR0V2F1 MINGW64 ~/GitDemo/GitDemo/GitDemo (main)
+$ git add -A
+
+wsm@DESKTOP-DR0V2F1 MINGW64 ~/GitDemo/GitDemo/GitDemo (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+wsm@DESKTOP-DR0V2F1 MINGW64 ~/GitDemo/GitDemo/GitDemo (main)
+$ git log --oneline
+b6dc02b (HEAD -> main, origin/main, origin/HEAD) adding Demo.py file
+9fe8b2b adding Demo.py file
+d2b215a Initial commit
+
+wsm@DESKTOP-DR0V2F1 MINGW64 ~/GitDemo/GitDemo/GitDemo (main)
+$ git commit -m 'adding Demo.py file'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+wsm@DESKTOP-DR0V2F1 MINGW64 ~/GitDemo/GitDemo/GitDemo (main)
+$ git log --oneline
+b6dc02b (HEAD -> main, origin/main, origin/HEAD) adding Demo.py file
+9fe8b2b adding Demo.py file
+d2b215a Initial commit
+
+wsm@DESKTOP-DR0V2F1 MINGW64 ~/GitDemo/GitDemo/GitDemo (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+wsm@DESKTOP-DR0V2F1 MINGW64 ~/GitDemo/GitDemo/GitDemo (main)
+$ git diff
+diff --git a/README.md b/README.md
+index 605511f..4563301 100644
+--- a/README.md
++++ b/README.md
+@@ -1,4 +1,5 @@
+ # GitDemo
+ Siming Wu's REPO
+ this is my first time saying blahblahblah
+-Let's do it again Siming Wu!
+\ No newline at end of file
++Let's do it again Siming Wu!
++ADD SOMETHING
+\ No newline at end of file
+
+wsm@DESKTOP-DR0V2F1 MINGW64 ~/GitDemo/GitDemo/GitDemo (main)
+$ git checkout .
+Updated 1 path from the index
+
+wsm@DESKTOP-DR0V2F1 MINGW64 ~/GitDemo/GitDemo/GitDemo (main)
+$ git checkout -- READ.md
+error: pathspec 'READ.md' did not match any file(s) known to git
+
+wsm@DESKTOP-DR0V2F1 MINGW64 ~/GitDemo/GitDemo/GitDemo (main)
+$ git checkout -- README.md
+
+wsm@DESKTOP-DR0V2F1 MINGW64 ~/GitDemo/GitDemo/GitDemo (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+wsm@DESKTOP-DR0V2F1 MINGW64 ~/GitDemo/GitDemo/GitDemo (main)
+$ cat README.md
+# GitDemo
+Siming Wu's REPO
+this is my first time saying blahblahblah
+Let's do it again Siming Wu!
+wsm@DESKTOP-DR0V2F1 MINGW64 ~/GitDemo/GitDemo/GitDemo (main)
+$ git help restore
+
+
+
+wsm@DESKTOP-DR0V2F1 MINGW64 ~/GitDemo/GitDemo/GitDemo (main)
+$
+
+wsm@DESKTOP-DR0V2F1 MINGW64 ~/GitDemo/GitDemo/GitDemo (main)
+$
+
+wsm@DESKTOP-DR0V2F1 MINGW64 ~/GitDemo/GitDemo/GitDemo (main)
+$ git push
+Everything up-to-date
+
+wsm@DESKTOP-DR0V2F1 MINGW64 ~/GitDemo/GitDemo/GitDemo (main)
+$ git branch
+* main
+
+wsm@DESKTOP-DR0V2F1 MINGW64 ~/GitDemo/GitDemo/GitDemo (main)
+$ git branch *
+
+wsm@DESKTOP-DR0V2F1 MINGW64 ~/GitDemo/GitDemo/GitDemo (main)
+$ bit branch NewFeatureBranch
+bash: bit: command not found
+
+wsm@DESKTOP-DR0V2F1 MINGW64 ~/GitDemo/GitDemo/GitDemo (main)
+$ git branch NewFeatureBranch
+
+wsm@DESKTOP-DR0V2F1 MINGW64 ~/GitDemo/GitDemo/GitDemo (main)
+$ git branch
+  NewFeatureBranch
+  README.md
+* main
+
+wsm@DESKTOP-DR0V2F1 MINGW64 ~/GitDemo/GitDemo/GitDemo (main)
+$ git checkout NewFeatureBranch
+Switched to branch 'NewFeatureBranch'
+
+wsm@DESKTOP-DR0V2F1 MINGW64 ~/GitDemo/GitDemo/GitDemo (NewFeatureBranch)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+wsm@DESKTOP-DR0V2F1 MINGW64 ~/GitDemo/GitDemo/GitDemo (main)
+$ git getch origin main
+git: 'getch' is not a git command. See 'git --help'.
+
+The most similar command is
+        fetch
+
+wsm@DESKTOP-DR0V2F1 MINGW64 ~/GitDemo/GitDemo/GitDemo (main)
+$ git fetch origin main
+From https://github.com/swuu0069/GitDemo
+ * branch            main       -> FETCH_HEAD
+
+wsm@DESKTOP-DR0V2F1 MINGW64 ~/GitDemo/GitDemo/GitDemo (main)
+$ git  pull origin main
+From https://github.com/swuu0069/GitDemo
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+
+wsm@DESKTOP-DR0V2F1 MINGW64 ~/GitDemo/GitDemo/GitDemo (main)
+$ git push origin main
+Everything up-to-date
+
+wsm@DESKTOP-DR0V2F1 MINGW64 ~/GitDemo/GitDemo/GitDemo (main)
+$ git push
+Everything up-to-date
+
+wsm@DESKTOP-DR0V2F1 MINGW64 ~/GitDemo/GitDemo/GitDemo (main)
